@@ -3,6 +3,11 @@ class UsersController < ApplicationController
 
   end
 
+  def edit
+    redirect_to users_path
+
+  end
+
   def new_guest
     user = User.guest
     sign_in user
