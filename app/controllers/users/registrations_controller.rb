@@ -1,12 +1,12 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   #ログイン時
   def after_sign_up_path_for(resource)
-    users_path(resource.id)
+    notes_path(resource.id)
   end
 
   #アカウント編集後のリダイレクト先
   def after_update_path_for(resource)
-    users_path(resource.id)
+    notes_path(resource.id)
   end
 
  before_action :check_guest, only: %i[update destroy]

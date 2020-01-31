@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :notes
   get 'users/index'
   root 'homes#index'
   devise_for :users, controllers: {

@@ -11,5 +11,10 @@ module TweetApp
     config.i18n.default_locale = :ja
     config.time_zone = 'Asia/Tokyo'
 
+    config.generators do |g|
+     g.javascripts false
+     g.helper false
+     g.test_framework false
+   end
   end
 end

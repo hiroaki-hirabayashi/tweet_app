@@ -1,8 +1,19 @@
 class ApplicationController < ActionController::Base
   #新規
   def after_sign_in_path_for(resource)
-    users_path(resource.id)
+    notes_path(resource.id)
   end
+
+  def after_sign_up_path_for(resource)
+    notes_path(resource.id)
+  end
+
+  def edit
+    redirect_to notes_path
+
+  end
+
+
 
 
   before_action :configure_permitted_parameters, if: :devise_controller?
